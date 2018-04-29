@@ -3,14 +3,23 @@
   "version": "1.0.8",
   "description": "An easier way to manage files.",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JacobTDC/fsso.git"
+  },
   "author": "jacobtdc",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JacobTDC/fsso/issues"
+  },
+  "homepage": "https://github.com/JacobTDC/fsso#readme",
   "tonicExampleFilename": "example.js",
   "keywords": [
     "fs",
+    "file",
     "files",
     "object",
-    "obj",
-    "simple"
+    "simple",
+    "file system"
   ]
 }
