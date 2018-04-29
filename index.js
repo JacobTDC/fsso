@@ -67,7 +67,7 @@ class Directory extends fsObject {
     return fs.rmdirSync(this.path)
   }
   find(name) {
-    return this.files.find((p) => p.name = name)
+    return this.files.find((p) => p.name == name)
   }
   create(name) {
     fs.closeSync(fs.openSync(path.join(this.path, name), 'wx'))
