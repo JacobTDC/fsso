@@ -1,0 +1,16 @@
+{
+  "name": "fsso",
+  "version": "1.0.8",
+  "description": "An easier way to manage files.",
+  "main": "index.js",
+  "author": "jacobtdc",
+  "license": "MIT",
+  "tonicExampleFilename": "example.js",
+  "keywords": [
+    "fs",
+    "files",
+    "object",
+    "obj",
+    "simple"
+  ]
+}
