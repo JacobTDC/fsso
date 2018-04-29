@@ -92,6 +92,12 @@ class File extends fsObject {
   delete() {
     return fs.unlinkSync(this.path)
   }
+  createReadStream(options) {
+    return fs.createReadStream(this.path, options)
+  }
+  createWriteStream(options) {
+    return fs.createWriteStream(this.path, options)
+  }
 }
 
 

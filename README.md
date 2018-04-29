@@ -1,5 +1,3 @@
-
-
 # File System Simple Objects
 
   A simplified, object oriented File System module.
@@ -37,7 +35,7 @@ $ npm install fsso
 
   * An easier way to manage files in Node.JS
   * Files are automatically changed in the object when they are changed on the computer
-  * Supports Read/Write streams (*coming in a future update*)
+  * Supports Read/Write streams
 
 # Properties
 
@@ -178,6 +176,23 @@ writes in a file
 ```javascript
 var data = File.write( data, options )
 data instanceof Buffer || typeof data =="string"
+```
+
+### .createReadStream( [options] )
+returns a readable stream
+* **[`options`](https://nodejs.org/api/fs.html#fs_fs_createreadstream_path_options): [\<Object\>][object] | [\<string\>][string]**
+
+```javascript
+var readStream = File.createReadStream( options )
+```
+
+### .createWriteStream( [options] )
+returns a writeable stream
+* **[`options`](https://nodejs.org/api/fs.html#fs_fs_createwritestream_path_options): [\<Object\>][object] | [\<string\>][string]**
+
+**WARNING**: Modifies files! Use with care.
+```javascript
+var writeStream = File.createWriteStream( data, options )
 ```
 
 [version]: https://img.shields.io/npm/v/fsso.svg
