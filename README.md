@@ -130,6 +130,16 @@ var newDir = Directory.mkDir( name, mode )
 newDir instanceof Directory
 ```
 
+### .create( name )
+creates a file with the given name and returns it as a `File` object
+* **`name`: [\<string\>][string]**
+
+```javascript
+var newFile = Directory.create( name )
+newFile instanceof File
+```
+
+
 ### .remove( name )
 removes a file or sub-directory from the directory and it's corresponding on-drive file or directory; returns undefined
 * **`name`: [\<string\>][string]**

@@ -46,7 +46,7 @@ class Directory extends fsObject {
     else main = process.cwd()
     this.path = path.resolve(path.dirname(main), dir)
     this.name = path.parse(this.path).base
-    if (!fs.lstatSync(dir).isDirectory()) throw TypeError(`"${path.normalize(dir)}" is not a directory.`)
+    if (!fs.lstatSync(dir).isDirectory()) throw new Error(`ENOTDIR: '${path.normalize(file)}' is not a directory.`)
   }
 
   get files() {
@@ -64,11 +64,14 @@ class Directory extends fsObject {
     else fs.unlinkSync(path.join(this.path, name))
   }
   delete() {
-    delete this
     return fs.rmdirSync(this.path)
   }
   find(name) {
     return this.files.find((p) => p.name = name)
+  }
+  create(name) {
+    fs.closeSync(fs.openSync(path.join(this.path, name), 'wx'))
+    return new File(path.join(this.path, name))
   }
 }
 
@@ -82,12 +85,11 @@ class File extends fsObject {
     else main = process.cwd()
     this.path = path.resolve(path.dirname(main), file)
     this.name = path.parse(this.path).base
-    if (fs.lstatSync(file).isDirectory()) throw TypeError(`"${path.normalize(file)}" is not a file.`)
+    if (fs.lstatSync(file).isDirectory()) throw new Error(`EISDIR: '${path.normalize(file)}' is a directory.`)
     this.read = function(options){ return fs.readFileSync(this.path, options) }
     this.write = function(data, options){ return fs.readFileSync(this.path, data, options) }
   }
   delete() {
-    delete this
     return fs.unlinkSync(this.path)
   }
 }
