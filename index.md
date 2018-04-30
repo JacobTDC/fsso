@@ -1,3 +1,8 @@
+---
+layout: home
+title: All the Things
+---
+
 ## Welcome to the FSSO GitHub Page!
 
 ```bash
