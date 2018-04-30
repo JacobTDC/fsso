@@ -24,9 +24,7 @@ function hierarchy(p) {
   else return {
     name: path.parse(p).base,
     type: 'dir',
-    files: fs.readdirSync(p).map((newPath) => {
-      return hierarchy(path.resolve(p, newPath))
-    })
+    files: fs.readdirSync(p).map((newPath) => hierarchy(path.resolve(p, newPath)))
   }
 }
 
