@@ -20,8 +20,9 @@ const path = require('path');
 
 function hierarchy(p) {
   p = path.resolve(p);
-  if (fs.lstatSync(p).isFile()) return {name: path.parse(p).base, type: 'file'}
-  else {
+  if (fs.lstatSync(p).isFile()) {
+    return {name: path.parse(p).base, type: 'file'}
+  } else {
     return {
       name: path.parse(p).base,
       type: 'dir',
@@ -42,3 +43,4 @@ const fsso = require('fsso');
 
 var dir = fsso.Directory('.');
 console.log(dir.hierarchy());
+```
