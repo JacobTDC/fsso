@@ -4,7 +4,7 @@ title: All the Things
 ---
 
 ## Welcome to the FSSO GitHub Page!
-## {{ page.title }}
+## {{ page.title }} yeah!
 
 ```bash
 $ npm install fsso
