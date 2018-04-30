@@ -1,3 +1,7 @@
+---
+layout: main
+---
+
 ## Welcome to the FSSO GitHub Page!
 
 ```bash
