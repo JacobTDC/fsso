@@ -8,6 +8,7 @@ The goal of the FSSO object is to make it easier to manage files using Node.JS.
 
 ### Comparison to standalone File System:
 #### Standalone File System (and Path):
+
 ```javascript
 const fs = require('fs');
 const path = require('path');
@@ -29,6 +30,7 @@ function hierarchy(p) {
 console.log(hierarchy('.'));
 ```
 #### With FSSO:
+
 ```javascript
 const fsso = require('fsso');
 
