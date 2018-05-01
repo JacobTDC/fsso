@@ -87,7 +87,7 @@ class File extends fsObject {
     this.name = path.parse(this.path).base
     if (fs.lstatSync(file).isDirectory()) throw new Error(`EISDIR: '${path.normalize(file)}' is a directory.`)
     this.read = function(options){ return fs.readFileSync(this.path, options) }
-    this.write = function(data, options){ return fs.readFileSync(this.path, data, options) }
+    this.write = function(data, options){ return fs.writeFileSync(this.path, data, options) }
   }
   delete() {
     return fs.unlinkSync(this.path)
