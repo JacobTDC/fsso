@@ -1,3 +1,5 @@
 theme: jekyll-theme-cayman
 show_downloads: true
 description: a simplied, object oriented File System module
+npm: fsso
+show_npm_link: true
