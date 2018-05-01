@@ -3,3 +3,4 @@ description: a simplied, object oriented File System module
 npm_repo: fsso
 show_npm_link: true
 show_wiki: true
+show_license: true
