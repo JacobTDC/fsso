@@ -1,5 +1,6 @@
 ---
 layout: main
+title: Home
 ---
 
 ## Welcome to the FSSO GitHub Page!
